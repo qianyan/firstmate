@@ -1,0 +1,37 @@
+=== BASE 147b2672 (pre-fix), od shim shadowing ===
+od resolved from PATH: /var/folders/3x/mjwx10950bj2gk_rgqb6q86r0000gp/T//fm-od-flap.xYyl4w/fakebin/od
+status logs: 5
+cycle 1: ACTIONABLE - watcher wakes firstmate for 5 status log(s)
+cycle 2: ACTIONABLE - watcher wakes firstmate for 5 status log(s)
+--- dedup markers written to state ---
+.hb-surfaced-task-1
+.hb-surfaced-task-2
+.hb-surfaced-task-3
+.hb-surfaced-task-4
+.hb-surfaced-task-5
+.hb-surfaced-task-1 -> v2	r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumptool.	65@strong:16777230:226054221:1792939477.747359451
+.hb-surfaced-task-2 -> v2	r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumptool.	65@strong:16777230:226054222:1792939477.747701738
+.hb-surfaced-task-3 -> v2	r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumptool.	65@strong:16777230:226054223:1792939477.747956901
+.hb-surfaced-task-4 -> v2	r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumptool.	65@strong:16777230:226054224:1792939477.748231231
+.hb-surfaced-task-5 -> v2	r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumptool.	65@strong:16777230:226054225:1792939477.748488269
+VERDICT: FLAP - cycle 2 re-reported the same events (unbounded re-report)
+base-exit=1
+
+=== TARGET 93f694bc (pinned /usr/bin/od), od shim shadowing ===
+od resolved from PATH: /var/folders/3x/mjwx10950bj2gk_rgqb6q86r0000gp/T//fm-od-flap.PI5ShH/fakebin/od
+status logs: 5
+cycle 1: ACTIONABLE - watcher wakes firstmate for 5 status log(s)
+cycle 2: absorbed - no captain-relevant change (0 re-reports)
+--- dedup markers written to state ---
+.hb-surfaced-task-1
+.hb-surfaced-task-2
+.hb-surfaced-task-3
+.hb-surfaced-task-4
+.hb-surfaced-task-5
+.hb-surfaced-task-1 -> v2	r1:3635007374726f6e673a31363737373233303a3232363035343539323a313739323933393438302e35343833393836343700526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65	65@strong:16777230:226054592:1792939480.548398647
+.hb-surfaced-task-2 -> v2	r1:3635007374726f6e673a31363737373233303a3232363035343539333a313739323933393438302e35343835333438313200526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65	65@strong:16777230:226054593:1792939480.548534812
+.hb-surfaced-task-3 -> v2	r1:3635007374726f6e673a31363737373233303a3232363035343539343a313739323933393438302e35343836333737363900526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65	65@strong:16777230:226054594:1792939480.548637769
+.hb-surfaced-task-4 -> v2	r1:3635007374726f6e673a31363737373233303a3232363035343539353a313739323933393438302e35343837343633303900526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65	65@strong:16777230:226054595:1792939480.548746309
+.hb-surfaced-task-5 -> v2	r1:3635007374726f6e673a31363737373233303a3232363035343539363a313739323933393438302e35343838333238393100526567756c61722046696c653a313030363434002d007265616461626c65007265616461626c65	65@strong:16777230:226054596:1792939480.548832891
+VERDICT: flap closed - events surface once, then durably deduped
+target-exit=0

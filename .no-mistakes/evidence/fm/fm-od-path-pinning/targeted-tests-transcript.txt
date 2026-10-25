@@ -1,0 +1,32 @@
+## tests/fm-stat-shadowing.test.sh at TARGET 93f694bc (green)
+ok - shadowing: fake od shim shadows /usr/bin/od in PATH
+ok - shadowing: fake GNU stat shadows /usr/bin/stat in PATH
+ok - fm_sup_stat_mtime returns correct epoch mtime under GNU stat shadowing
+ok - fm_startup_memory_budget_link_count returns correct link count under GNU stat shadowing
+ok - _fm_status_file_size returns correct byte size under GNU stat shadowing
+ok - stat_mtime from fm-watch.sh returns correct epoch mtime under GNU stat shadowing
+ok - status_observed_signature returns a valid r1:hex signature under od shim shadowing
+ok - status_presentation_marker_commit refuses an unparseable signature and preserves the marker
+ok - procevent_surfaced_marker yields distinct slash-free hex names per queue key
+
+## same test with bin/fm-classify-lib.sh + bin/fm-watch.sh restored to BASE 147b2672 (red - regression caught)
+ok - shadowing: fake od shim shadows /usr/bin/od in PATH
+ok - shadowing: fake GNU stat shadows /usr/bin/stat in PATH
+ok - fm_sup_stat_mtime returns correct epoch mtime under GNU stat shadowing
+ok - fm_startup_memory_budget_link_count returns correct link count under GNU stat shadowing
+ok - _fm_status_file_size returns correct byte size under GNU stat shadowing
+ok - stat_mtime from fm-watch.sh returns correct epoch mtime under GNU stat shadowing
+od-shim: unknown option: -An
+not ok - status_observed_signature returned a non-hex signature under od shim shadowing: r1:Usage:od-shim[--port<n>][--host<addr>]Ashimmustneverstandinfortheoctal-dumpto
+exit=1
+
+## tests/fm-operational-input.test.sh at TARGET (touched by the change)
+ok - operational input: every current generic envelope retains its exact structured kind
+ok - operational input: the established from-firstmate carrier remains structurally typed and byte-compatible
+ok - operational input: untyped landed FIRSTMATE_OP transcripts are explicit legacy-operational input
+ok - operational input: historical prose compatibility is isolated from current parsing
+ok - operational input: quoted, ASCII-only, arbitrary-U+2063, altered-legacy, and label-only near misses stay genuine
+ok - operational input: the OpenCode adapter constructs through the canonical owner
+ok - operational input: current construction rejects legacy kinds and empty bodies
+ok - record-backed carrier: Claude-only selection, an ASCII doorbell naming an exact envelope record, home-bound open, and no recognition without the record
+ok - record pruning: expired records past one argument list are all pruned on a write
